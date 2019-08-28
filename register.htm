@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register</title>
+	<script type="text/javascript">
+		var check= function () {
+			if(document.getElementById('password').value==
+				document.getElementById('confirm_password').value){
+				document.getElementById('messege').style.color='green';
+			    document.getElementById('messege').innerHTML='should be same';
+
+			}else{
+				document.getElementById('messege').style.color='red';
+				document.getElementById('messege').innerHTML='should not be same';
+			}
+		}
+	</script>
+	
+	<style>
+	
+	body{
+	
+	background:#c7c7c7;
+	}
+	
+	.main{
+	margin-top:200px;
+	}
+	form {
+  margin:0 auto;
+  width:300px
+}
+input {
+  margin-bottom:3px;
+  padding:10px;
+  width: 100%;
+  border:1px solid #CCC
+}
+button {
+  padding:10px
+}
+label {
+  cursor:pointer
+}
+#form-switch {
+  display:none
+}
+#register-form {
+  display:none
+}
+#form-switch:checked~#register-form {
+  display:block
+}
+#form-switch:checked~#login-form {
+  display:none
+}
+	
+	</style>
+	
+	
+</head>
+<body>
+	
+	<div class="main">
+	
+	<input type='checkbox' id='form-switch'>
+<form id='lregister-form' action="" method='post'>
+  <input type="text" placeholder="Firsr Name" required>
+  <input type="text" placeholder="Middle Name">
+  <input type="text" placeholder="Last Name" required>
+  <input type="email" placeholder="Email" required>
+  <input type="Number" placeholder="Mobile Number">
+  <input type="password" placeholder="Password" id="password">
+  <input type="password" placeholder="Confirm Password" id="confirm_password" onkeyup="check();">
+  <span id="messege"></span><br>
+  <a href="Home.html"><button type='submit'>Register</button></a>
+  <label for='form-switch'><span><a href="Home.html">already have an account ?</a></span></label>
+</form>
+
+	
+	</div>
+	
+	
+</body>
+</html>

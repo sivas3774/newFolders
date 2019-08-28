@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	
+	<style>
+	
+	body{
+	
+	background:#c7c7c7;
+	}
+	
+	.main{
+	margin-top:200px;
+	}
+	form {
+  margin:0 auto;
+  width:300px
+}
+input {
+  margin-bottom:3px;
+  padding:10px;
+  width: 100%;
+  border:1px solid #CCC
+}
+button {
+  padding:10px
+}
+label {
+  cursor:pointer
+}
+#form-switch {
+  display:none
+}
+#register-form {
+  display:none
+}
+#form-switch:checked~#register-form {
+  display:block
+}
+#form-switch:checked~#login-form {
+  display:none
+}
+	
+	</style>
+	
+	
+</head>
+<body>
+	
+	<div class="main">
+	
+	
+<form id='login-form' action="" method='post'>
+  <input type="email" placeholder="Username" required>
+  <input type="password" placeholder="Password" required>
+  <a href="dashboard.html"><button type='submit'>Login</button></a>
+  <a href="register.htm"><label for='form-switch'><span>Register</span></label></a>
+</form>
+
+	
+	</div>
+	
+	
+</body>
+</html>
